@@ -1,20 +1,3 @@
-const nome = 'Ana'; //não se atribui novo valor
-const idade = 30
-const matricula = true;
-const cidade = null;
-
-console.log('nome:', nome);
-console.log('idade:', idade);
-console.log('matricula:', matricula);
-console.log('cidade:', cidade);
-
-alert('alerta')
-
-let nome1 = 'Ana'; //aceita atribuição de novos valores
-console.log(nome1)
-nome1 = 'Gabi';
-console.log(nome1)
-
 const disciplina = [
     "JavaScript",
     "HTML",
@@ -30,3 +13,35 @@ const pessoa = {
 }
 
 console.log('Objeto pessoa:', pessoa)
+
+//escopo global
+const nome = 'carlos';
+
+function mostrarNome() {
+    console.log(nome);
+}
+
+mostrarNome();
+
+//escopo local
+function cadastro() {
+    const usuario = 'maria';
+    console.log(usuario);
+}
+
+cadastro();
+
+//escopo de bloco
+const empresa = 'totvs'; //global
+
+function exemplo () {
+    const depto = 'tecnologia'; //local
+    if (true) {
+        const cargo = 'dev'; //bloco
+        console.log(empresa);
+        console.log(depto);
+        console.log(cargo);
+    }
+}
+
+exemplo();

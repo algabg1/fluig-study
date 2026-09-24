@@ -49,3 +49,7 @@ mostrarMensagem();
 
 > diferença entre express e anônima: uma função expression pode ser anônima, a diferença na expresion é que ela pode ter um nome
 
+## Variáveis
+- escopo global: variável criada fora de qualquer função ou bloco pode ser acessada em praticamente todo o programa
+- escopo local: variável criada dentro de uma função existe apenas dentro dessa função
+- escopo de bloco: um bloco é qualquer trecho de código delimitado por chaves {}. variáveis criada com let ou const dentro desse bloco só podem ser utilizadas nele
