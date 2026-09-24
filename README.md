@@ -53,3 +53,27 @@ mostrarMensagem();
 - escopo global: variável criada fora de qualquer função ou bloco pode ser acessada em praticamente todo o programa
 - escopo local: variável criada dentro de uma função existe apenas dentro dessa função
 - escopo de bloco: um bloco é qualquer trecho de código delimitado por chaves {}. variáveis criada com let ou const dentro desse bloco só podem ser utilizadas nele
+
+
+## Estrutura de dados
+- objetos: permitem agrupar diversas informações relacionadas em uma única estrutura. em vez de criar várias variáveis separadas, podemos armazenar tudo dentro de um único objeto. cada informação recebe o nome de propriedade
+```
+const pessoa = {
+    nome: 'maria',
+    idade: 25,
+    cidade: 'são paulo'
+};
+```
+- array: utilizado para armazenar vários valores em uma única variável
+    - indices: posição do item
+    - push: adiciona um item ao final do array
+    - unshift:adiciona um item ao início do array
+    - spread: adiciona um item ao início do array
+    - pop: remove o último item
+    - length: retorna a quantidade de elementos
+
+- loops
+    - for: quando sabemos quantas vezes desejamos repetir. permite usar break e continue
+    - while: repete enquanto uma condição for verdadeira
+    - for.. of: percorre os elementos de um array. permite usar break e continue
+    - forEach: percorre todos os elementos de um array
