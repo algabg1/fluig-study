@@ -28,3 +28,24 @@
 - else if: utilizado quando exsitem várias condições para serem verificadas
 - switch: utilizado quando uma variável pode assumir diferentes valores conhecidos. evita escrever vários else if para comprar a mesma variável. o _break_ encerra a execução do switch
 - ternário: forma reduzida de escrever um if... else simples. quando existe uma decisão simples entre dois resultados
+
+## Funções
+bloco de código criado para executar uma determinada tarefa. em vez de escrever o mesmo código várias vezes, podemos agrupar dentro de uma função e executar sempre que necessário, tornando o código mais organizado, reutilizável e fácil de manter
+```
+function mostrarMensagem() {
+    console.log('olá');
+}
+
+mostrarMensagem();
+```
+- parâmetros: são variáveis declaradas na definição da função, utlizadas para receber valores quando a função é chamada
+- argumentos: valores passados para a função no momento em que ela é chamada
+- return: em alguns casos, uma função precisa devolver um resultado, para isso, utilizamos a palavra-chave 'return'
+
+- Function Declaration: utliza a palavra-chave _function_ seguida do nome da função
+- Function Expression: a função passa a ser armazenada dentro da variável
+- Função anônima: não possui nome
+- Arrow Function: forma mais curta e moderna de escrever funções em js. utiliza o operador => em vez da palavra-chave _function_
+
+> diferença entre express e anônima: uma função expression pode ser anônima, a diferença na expresion é que ela pode ter um nome
+
