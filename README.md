@@ -11,7 +11,7 @@
 ### Operadores de comparação
 - == igual
 - != diferente
-- > maior que
+- \> maior que
 - < menor que
 - <= menor ou igual
 - === alem do valor, verifica tambem o tipo de dado
@@ -21,3 +21,7 @@
 - && retorna true apenas quando todas as condições são verdadeiras
 - || retorna true quando pelo menos uma das condições é verdadeira
 - ! inverte um valor boolean
+
+## Controle de fluxo
+- if: executa um bloco de código somente se a condição for verdadeira
+- else:
