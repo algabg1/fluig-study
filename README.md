@@ -24,4 +24,7 @@
 
 ## Controle de fluxo
 - if: executa um bloco de código somente se a condição for verdadeira
-- else:
+- else: utilizado quando queremos executar um bloco de código caso a condição if seja falsa
+- else if: utilizado quando exsitem várias condições para serem verificadas
+- switch: utilizado quando uma variável pode assumir diferentes valores conhecidos. evita escrever vários else if para comprar a mesma variável. o _break_ encerra a execução do switch
+- ternário: forma reduzida de escrever um if... else simples. quando existe uma decisão simples entre dois resultados
