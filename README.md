@@ -119,4 +119,21 @@ Para encontrar os elementos na página, são usadas a função de seletores e as
     - add(): adiciona classe
     - remove(): remove classe
     - toggle(): adiciona a classe caso ela não exista e remove caso ela já exista
-    - contains(): vereifica se uma classe existe
+    - contains(): verifica se uma classe existe
+- style: permite alterar estilos CSS diretamente do JS
+- atributos HTML
+    - setAttribute(): adiciona ou altera um atributo de um elemento HTML
+    - getAttribute(): retorna o valor de um atributo
+- addEventListener(): utilizado para associar um evento a um elemento
+    - click
+    - input
+    - change
+```
+elemento.addEventListener("evento", function() {
+    //código executado quando o evento acontecer
+})
+```
+- formulários: utilizados para receber informações digitadas pelo usuário. presentes em praticamente todos os sites e sistemas
+    - document.forms
+    - submit: quando o formulário é enviado
+    - preventDefault: para impedir o carregamento da página ao enviar um formulário

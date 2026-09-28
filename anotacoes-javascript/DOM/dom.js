@@ -84,3 +84,115 @@ texto4.classList.toggle("ativo"); //<p class="ativo">Olá</p>
 
 //contains
 console.log(texto4.classList.contains("ativo")); //true
+
+//style
+
+/*
+<p id="mensagem1">Olá</p>
+*/
+
+const mensagem1 = document.getElementById("mensagem1");
+mensagem1.style.color("blue"); // a cor do texto ficará azul
+mensagem1.style.fontSize = "24px"; // o tamanho da fonte será alterado para 24px
+
+//setAttribute
+
+/*
+<img id="foto">
+*/
+const foto = document.getElementById("foto");
+foto.setAttribute("src", "imagem.jpg"); // <img src="imagem.jpg">
+
+//getAttribute
+
+/*
+<a id="link" href="https://www.google.com">Google</a>
+*/
+
+const link = document.getElementById("link");
+console.log(link.getAttribute("href")); //https://www.gooogle.com
+
+//addEventListener
+
+//click
+/*
+<button id="btnSalvar"> Salvar </button>
+*/
+
+const botao = document.getElementById("btnSalvar");
+botao.addEventListener("click", function(){
+    console.log("botão clicado");
+}); // sempre que o botão for clicado, a mensagem aparecerá no console
+
+//input
+
+/*
+<input id="nome" type="text">
+*/
+
+const campo = document.getElementById("nome");
+campo.addEventListener("input", function(){
+    console.log(campo.value);
+}); //sempre que uma letra for digitada, o console exibirá o valor atual do campo
+
+//change
+
+/*
+<select id="estado">
+    <option>São Paulo</option>
+    <option>Rio de Janeiro</option>
+    <option>Minas Gerais</option>
+</select>
+*/
+
+const estado = document.getElementById("estado");
+estado.addEventListener("change", function() {
+    console.log(estado.value);
+}); // sempre que o usuário selecionar outra opção, o valor será exibido no console
+
+//formulários
+
+/*
+<form id="contato"></form>
+<form id="cadastro"></form>
+*/
+
+console.log(document.forms);
+
+/*
+<form name="contato"></form>
+*/
+
+const formulario = document.forms.contato;
+console.log(formulario); // <form name="contato">
+
+/*
+<form name="contato">
+    input type="text" name="nome">
+</form>
+*/
+
+const campo = document.forms.contato.nome;
+console.log(campo); // <input name="nome">
+
+/*
+<form name="contato">
+    <input type="text" name="nome" value="maria"
+</form>
+*/
+
+console.log(document.contato.nome.value); // maria
+
+//submit
+
+/*
+<form name="contato">
+    <input type="text" name="nome">
+    <button Type="submit"> Enviar </button>
+</form>
+*/
+
+const formulario1 = document.forms.contato;
+formulario1.addEventListener("submit", function() {
+    console.log("formulário enviado");
+}); // sempre que o formulário for enviado, essa função será executada
