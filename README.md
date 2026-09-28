@@ -99,3 +99,24 @@ const pessoa = {
     - math.ceil(): arredonda para cima
     - math.random(): gera um número aleatório entre 0 e 1
     - boolean(): converte um valor para verdadeiro ou falso
+
+## DOM
+Document Object Model (Modelo de objeto de documento): representa a estrutura de uma página HTML. quando uma página é carregada no navegador, o HTML é transformado em uma estrutura organizada em forma de árvore, que permite que o js encontre, leia, altere, adicione ou remova elementos da página. é a ponte entre o HTML e o JS
+
+Cada tecnologia possui uma função diferente no desenvolvimento de uma página web
+- HTML define a estrutura
+- CSS define a aparência
+- JavaScript adiciona comportamento e interatividade, utilizando o DOM para acessar e manipular os elementos criados pelo HTML
+
+Para encontrar os elementos na página, são usadas a função de seletores e assim ler suas informações, alterar seu conteúdo, modificar estilos ou adicionar eventos
+- getElementById(): localiza um elemento utilizando seu atributo *id*. como o id deve ser único na página, esse método sempre retorna apenas *um elemento*. utilizar quando o elemento possuir um id e souber exatamente qual elemento deseja usar
+- querySelector(): localiza o primeiro elemento que corresponde ao seletor informado. utiliza a mesma sintaxe dos seletores CSS. pode selecionar elementos por id, classe, nome da tag, atributos, entre outros...
+- querySelectorAll(): retorna todos os elementos que correpondem ao seletor informado, resultando uma coleção de elementos
+- textContent(): utilizada para ler ou alterar apenas o texto de um elemento, não interpreta HTML
+- innerHTML: permite ler ou alterar o conteúdo HTML de um elemento, interpreta as tags HTML
+- value: utilizada para ler ou alterar o valor de campos de formulário. muito utilizada com input, textarea, select
+- classList: permite manipular as classes CSS de um elemento, podendo adicionar, remover ou verificar classes
+    - add(): adiciona classe
+    - remove(): remove classe
+    - toggle(): adiciona a classe caso ela não exista e remove caso ela já exista
+    - contains(): vereifica se uma classe existe
