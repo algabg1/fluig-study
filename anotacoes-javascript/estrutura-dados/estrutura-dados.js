@@ -80,3 +80,68 @@ const frutas2 = [
 frutas2.forEach(function (fruta2) {
     console.log(fruta2);
 }); // maça banana laranja
+
+//manipulação de strings
+//length
+
+const cNome = "js";
+console.log(cNome.length) //2
+
+//toUpperCase
+console.log(cNome.toUpperCase()); //JS
+
+//toLowerCase
+console.log(cNome.toLowerCase()); //js
+
+//trim
+const texto = ' JavaScript ';
+console.log(texto.trim());
+
+//replace
+texto = 'Olá, mundo';
+console.log(texto.replace(
+    'mundo',
+    'JavaScript'
+)); // Olá, JavaScript
+
+//includes
+const curso  = 'curso de js';
+console.log(curso.includes("js")); //true
+
+//split
+const nomes = 'Ana,Carlos,Pedro';
+console.log(nomes.split(',')); // ['Ana','Carlos','Pedro']
+
+//template string
+const nome = 'maria';
+console.log('olá, ${nome}!'); // olá, maria
+
+//numeros e booleanos
+//number
+console.log(Number('10')); // 10
+
+//parseInt
+console.log(parseInt('20.8')); // 20
+
+//parseFloat
+console.log(parseFloat('20.8')); // 20.8
+
+//toFixed
+const valor = 15.678;
+console.log(valor.toFixed(2)); // 15.68
+
+//Math.round
+console.log(Math.round(8.6)); // 9
+
+//Math.floor
+console.log(Math.floor(8.9)); // 8
+
+//Math.ceil
+nomes = 'Ana,Carlos,Pedro';
+console.log(nomes.split(',')); // ['Ana', 'Carlos', 'Pedro']
+
+//Math.random
+console.log(Math.random()); // 0.854...
+
+//Boolean
+console.log(Boolean(1)); // true

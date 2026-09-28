@@ -73,7 +73,29 @@ const pessoa = {
     - length: retorna a quantidade de elementos
 
 - loops
-    - for: quando sabemos quantas vezes desejamos repetir. permite usar break e continue
+    - for: quando sabemos quantas vezes desejamos repetir. permite usar break e continue. é mais rápido, pois é um laço simples e controlado diretamente pela linguagem
     - while: repete enquanto uma condição for verdadeira
-    - for.. of: percorre os elementos de um array. permite usar break e continue
-    - forEach: percorre todos os elementos de um array
+    - for.. of: percorre os elementos de um array. permite usar break e continue. muito eficiente e possui uma sintaxe mais simples
+    - forEach: percorre todos os elementos de um array. é um pouco mais lento porque ele percorre cada elemento e o js faz a chamada de uma função
+    > loop infinito: quando uma estrutura de repetição nunca encontra uma condição para ser encerrada
+
+- manipulação de string
+    - length: quantidade de caracteres
+    - toUpperCase(): converte para letras maiúsculas
+    - toLowerCase(): converte para letras minúsculas
+    - trim(): remove espaços no início e no fim
+    - replace(): substitui um trecho da string
+    - includes(): verifica se um texto existe dentro da string
+    - split(): divide uma string em um array
+    - template string: permite inserir variáveis diretamente no texto utilizando crases e a sintaxe ${}
+
+- números e boleanos
+    - Number(): converte um valor para número
+    - parseInt(): converte para número inteiro
+    - parseFloat(): converte para número decimal
+    - toFixed(): define a quantidade de casas decimais
+    - math.round(): arredonda para o inteiro mais próximo
+    - math.floor(): arrendonda para baixo
+    - math.ceil(): arredonda para cima
+    - math.random(): gera um número aleatório entre 0 e 1
+    - boolean(): converte um valor para verdadeiro ou falso
