@@ -298,3 +298,71 @@ fetch("https://jsonplaceholder.typicode.com/users/1", {
     console.log("erro:", erro);
 });
 ```
+
+## Desenvolvendo com ES6+ no TOTVS Fluig
+Nova versão do JavaScript que foi lançada lá em 2015, e ela foi um grande marco porque ela trouxe uma série de evoluções e melhorias para a linguagem
+- declaração de variáveis
+```
+let contador = 0;   //pode ser reatribuido
+const PI = 3.14;    //não pode ser reatribuido
+```
+- Arrow function: funções mais curtas e sintaxe mais moderna
+```
+const soma = (a,b) => a + b;
+```
+- Template string: interpolar variáveis, quebrar linha
+```
+const nome = "Bruno";
+console.log("Olá, ${nome}! Seja bem-vindo.");
+```
+- Destructuring: extração de valores de arrays e objetos
+```
+const usuario = { nome: "Bruno", idade: 30 };
+const { nome, idade } = usuario; //extrai propriedades
+```
+- Spread e Rest operators: simplifica como copia dados de arrays e objetos
+```
+const numeros = [1,2,3];
+const novoArray = [...numeros, 4, 5]; //spread
+
+function soma(...valores) { //rest
+    return valores.reduce( (a,b) => a + b );
+}
+```
+- Default parameters: definir valores default para alguns parâmetros
+```
+function saudar(nome = "Visitante") {
+    console.log("Olá, ${nome}!");
+}
+```
+- Enhanced object literals: simplifica a sintaxe de um objeto
+```
+const nome = "Bruno";
+const idade = 30;
+
+const usuario = {
+    nome,           // mesmo que nome: nome
+    idade,          // mesmo que idade: idade
+    saudacao() {    //sintaxe curta para métodos
+        console.log("Olá, ${this.nome}!");
+    }
+};
+```
+- Strict mode: coloca o JS em um modo mais restrito de execução, ativando regras que ajudam a detectar comporamentos perigosos ou ambíguos no código. quando ativo, o JS impede algumas ações problemáticas e lança erros onde antes o código seria apenas ignorado silenciosamente
+antes:
+```
+function exemplo() {
+    x = 10;     //cria uma variável global sem declarar
+    console.log(x);
+}
+exemplo();
+```
+agora:
+```
+'use strict';
+function exemplo() {
+    var x = 10; //agora é necessário declarar a variável
+    console.log(x);
+}
+exemplo();
+```
