@@ -137,3 +137,164 @@ elemento.addEventListener("evento", function() {
     - document.forms
     - submit: quando o formulário é enviado
     - preventDefault: para impedir o carregamento da página ao enviar um formulário
+
+## Consumindo API
+Fetch API é o recurso do JS utilizado para realizar requisições para APIs
+```
+fetch("https://jsonplaceholder.typicode.com/users");
+```
+
+- response: objeto de retorno, contém informações sobre a resposta da API
+    - .then(): utilizado para executar um código quando a resposta da requisição estiver disponível
+    ```
+    fetch(url)
+    .then(function(response){
+        console.log(response);
+    });
+    ```
+- headers: são informações enviadas junto com a requisição, um do smais utilizados é _Content-Type_, informando qual o formato dos dados enviados, utilizar quando for enviar dados com métodos PUT, POST e DELETE.
+```
+headers: {"Content-Type": "application/json"}
+```
+
+- .catch(): utilizado para tratar erros que podem ocorrer durante uma requisição
+```
+fetch(url)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data);
+})
+.catch(function(erro){
+    console.log("erro no endpoint:", erro)
+})
+```
+- json: formato de retorno
+```
+{
+    id: 1,
+    nome: "maria",
+    idade: 25
+}
+```
+- response.json(): quando se utiliza o fecth(), a resposta ainda não está pronta para ser utilizada, precisa converter para um objeto JS
+```
+fetch(url)
+    .then(function(response){
+        return repsonse.json();
+    });
+```
+- JSON.stringify(): processo inverso do response.json(). transformo um objeto JS em uma string JSON
+```
+const usuario = {nome: "maria", idade: 25};
+const json = JSON.stringify(usuario);
+console.log(json); // resultado {"nome":"maria","idade":"25"}
+```
+- Consumindo API pública
+```
+fetch("https:/jsonplaceholder.typicode.com/users")
+.then(function(response){
+    return response.json();
+})
+.then(function(usuarios){
+    console.log(usuarios);
+})
+.catch(function(erro){
+    console.log("erro no endpoint:", erro);
+});
+/*
+resultado
+
+[
+    {
+        id: 1,
+        name: "leanne grahan",
+        ...
+    },
+    {
+        id: 2,
+        name: "ervin howell",
+        ...
+    }
+]
+
+*/
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(function(response){
+    return response.json();
+})
+.then(function(usuarios){
+    usuarios.forEach(function(usuario){
+        console.log(usuario.name);
+    });
+})
+.catch(function(erro){
+    console.log("erro no endpoint:", erro)
+});
+/*
+Resultado
+
+Leanne Graham
+Ervin Howell
+Clementine Bauch
+Patricia Lebsack
+Chelsey Dietrich
+
+*/
+```
+- POST
+```
+fetch("https://jsonplaceholder.typicode.com/users", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: "João da Silva",
+        email: "joao@email.com"
+    })
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+})
+.catch(error => {
+    console.log(error);
+});
+```
+- PUT
+```
+fetch("https://jsonplaceholder.typicode.com/users/1",
+{
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        id: 1,
+        name: "Joao SIlva Atualizado",
+        email: "novo@email.com"
+    })
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+})
+.catch(error => {
+    console.error(error);
+});
+```
+- DELETE
+```
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+    method: "DELETE"
+})
+.then(function(response){
+    console.log("usuario removido com sucesso!")
+})
+.catch(function(erro){
+    console.log("erro:", erro);
+});
+```
