@@ -313,7 +313,7 @@ const soma = (a,b) => a + b;
 - Template string: interpolar variáveis, quebrar linha
 ```
 const nome = "Bruno";
-console.log("Olá, ${nome}! Seja bem-vindo.");
+console.log(`Olá, ${nome}! Seja bem-vindo.`);
 ```
 - Destructuring: extração de valores de arrays e objetos
 ```
