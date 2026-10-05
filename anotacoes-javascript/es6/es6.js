@@ -19,6 +19,9 @@ var MyWidget = SuperWidget.extend({
 
         this.spreadOperator();
         this.restOperator();
+
+        this.gerarObjeto();
+        this.gerarObjeto2("campo2");
     },
 
     exemploVar: function() {
@@ -144,5 +147,46 @@ var MyWidget = SuperWidget.extend({
         const [primeiro, ...resto] = [10,20,30,40];
         console.log(primeiro); //10
         console.log(resto);    //[20,30,40]
+    },
+
+    //enhanced object literals
+    gerarObjeto() {
+        const nome = "Bruno";
+        const idade = 30;
+
+        //antes
+        const pessoa1 = {nome: nome, idade: idade};
+        console.log(pessoa1); //{nome: "Bruno", idade: 30}
+
+        //com ES6
+        const pessoa2 = {nome, idade};
+        console.log(pessoa2); //{nome: "Bruno", idade: 30}
+
+        //antes
+        const usuario1 = {
+            login: function() {
+                console.log("Usuario logado 1!");
+            }
+        };
+
+        //com ES6
+        const usuario2 = {
+            login() {
+                console.log("Usuario logado 2!");
+            }
+        };
+
+        usuario1.login(); // Usuario logado 1!
+        usuario2.login(); // Usuario logado 2!
+    },
+    gerarObjeto2(campo2) {
+        const campo = "email";
+        const usuario3 = {
+            nome: "Bruno",
+            [campo]: "bruno@email.com",
+            [campo2]: "valor do campo"
+        };
+
+        console.log(usuario3); // { nome: "Bruno", email: "bruno@email.com", campo2: "valor do campo" }
     },
 });
