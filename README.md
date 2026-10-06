@@ -162,6 +162,20 @@ elemento.addEventListener("evento", function() {
     - submit: quando o formulário é enviado
     - preventDefault: para impedir o carregamento da página ao enviar um formulário
 
+- dataset: armazenar pequenas informações diretamente nos elementos HTML
+
+- temporizadores: permitem executar uma ação após um determinado tempo ou em intervalos regulares
+    - setTimeout(): executa uma função apenas uma vez
+    - setInterval(): executa uma função repetidamente
+
+- date: trabalhar com datas e horários
+    - new Date(): cria um objeto contendo a data e a hora atuais
+    - getDate(): retorna o dia do mês
+    - getMonth(): retorna o mês
+    - getFullYear(): retorna o ano
+    - getHours(): retorna a hora atual
+    - getMinutes(): retorna os minutos
+
 ## Consumindo API
 Fetch API é o recurso do JS utilizado para realizar requisições para APIs
 ```
