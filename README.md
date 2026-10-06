@@ -1,3 +1,27 @@
+# Fluig
+## WCM
+Web Content Management: gerenciamento de conteúdo da web
+- criar portais
+- interfaces personalizadas
+
+Estrutura da página:
+- página: constituída por um layout
+- layout: define a composição de uma página
+- slots: espaços pré-definidos dentro de um layout
+- widget: componente de interface com o usuário responsável por montar o fragnmento de uma página
+
+Recursos da página:
+- opções de menu: agrupados ou sem acgupamento
+- ícones nas páginas
+
+Widgets:
+- componentes interativos
+- acesso centralizado
+- visualização de gráficos e dashboards
+- integração com aplicações de maneira simples
+- acesso rápido a relatórios e documentos
+- acesso a endereços web
+
 # Anotações estudo JavaScript voltado para Fluig
 
 ## Operadores 
