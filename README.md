@@ -366,3 +366,49 @@ function exemplo() {
 }
 exemplo();
 ```
+
+## jQuery
+o jQuery era muito importante e ele era até mesmo indispensável no desenvolvimento frontend. Ele resolvia questões de manipulação do DOM, pequenas animações e até mesmo compatibilidade com navegadores. só que, atualmente, com o JavaScript moderno, a maioria dessas vantagens a gente não precisa necessariamente de jQuery. As APIs nativas do navegador elas já conseguem resolver, a gente tem APIs nativas para isso e a gente não precisa da dependência do jQuery para conseguir desenvolver as nossas soluções
+quando a gente utiliza jQuery no nosso desenvolvimento, a gente acaba criando uma dependência de alguma coisa, o jQuery ele é uma biblioteca, então se a gente utiliza ele, a gente cria essa dependência dele. o mínimo de dependência que a gente tiver, a menor quantidade de dependência que a gente tiver com bibliotecas ou com qualquer outra coisa fora de um escopo nativo é muito bom para o nosso desenvolvimento, é muito bom para a manutenção a longo prazo do nosso código
+Exemplo:
+- selecionar elementos
+```
+logicajQuery() {
+    //exemplo de texto
+    $('.titulo').text('Bem-vindo!'); //aplica o texto na classe
+    //com JS
+    document.querySelector('.titulo').textContext = 'Bem-vindo!';
+
+    //exemplo com classes
+    $('.caixa', this.DOM).addClass('ativa');
+    //com JS
+    this.DOM.querySelector('.caixa').classList.add('ativa');
+
+    //exemplo de cor
+    $('.mensagem').css('color', 'red');
+    //com JS
+    this.DOM.querySelector('.mensagem').style.color = 'red';
+    
+    //varios estilos
+    const el = this.DOM.querySelector('.mensagem');
+    Object.assign(el.style, { color: 'red', backgroundColor: 'yellow' });
+
+    //inserir varios elementos no DOM
+    //jQuery
+    $('.lista').append('<li>Novo item</li>');
+
+    //JS
+    this.DOM.querySelector('.lista')
+        .insertAdjacentHTML('beforeend', '<li>Novo item</li>');
+    
+    //esconder e mostrar elementos
+    //jQuery
+    $('.caixa').hide();
+    $('.caixa').show();
+
+    //JS
+    const caixa = document.querySelector('.caixa');
+    caixa.style.display = 'none'; //esconder
+    caixa.style.display = '';     //mostrar (ou 'block', conforme o caso)
+}
+```

@@ -23,7 +23,6 @@ var MyWidget = SuperWidget.extend({
         this.gerarObjeto();
         this.gerarObjeto2("campo2");
 
-        this.metodoAleatorio();
     },
 
     exemploVar: function() {
@@ -191,10 +190,6 @@ var MyWidget = SuperWidget.extend({
         };
 
         console.log(usuario3); // { nome: "Bruno", email: "bruno@email.com", campo2: "valor do campo" }
-    },
+    }
 
-    //strict mode
-    metodoAleatorio() {
-
-    },
 });
