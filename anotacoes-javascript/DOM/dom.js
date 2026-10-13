@@ -196,3 +196,62 @@ const formulario1 = document.forms.contato;
 formulario1.addEventListener("submit", function() {
     console.log("formulário enviado");
 }); // sempre que o formulário for enviado, essa função será executada
+
+
+//preventDefault
+
+const formulario2 = document.forms.contato;
+formulario2.addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("formulário enviado sem recerregar a página");
+}); // sempre que o formulário for enviado, essa função será executada, mas a página não será recarregada
+
+//dataset
+
+/*
+<button id="produto" data-id="10" data-nome="notebook"> Comprar </button>
+*/
+
+const produto = document.getElementById("produto");
+console.log(produto.dataset.id); // 10
+console.log(produto.dataset.nome); // notebook
+
+//temporizadores
+//setTimeout
+
+setTimeout(function() {
+    console.log("olá");
+}, 2000); // a mensagem será exibida no console após 2 segundos
+
+//setInterval
+
+setInterval(function() {
+    console.log("executando...");
+}, 2000); // a mensagem será exibida no console a cada 2 segundos
+
+//date
+//new Date()
+
+const hoje = new Date();
+console.log(hoje); // exibe a data e hora atual Tue Jul 14 2026 10:30:15
+
+//getDate()
+hoje = new Date();
+console.log(hoje.getDate()); // exibe o dia do mês atual 14
+
+//getMonth()
+hoje = new Date();
+console.log(hoje.getMonth()); // exibe o mês atual (0-11) 6
+
+//getFullYear()
+hoje = new Date();
+console.log(hoje.getFullYear()); // exibe o ano atual 2026
+
+//gethours()
+hoje = new Date();
+console.log(hoje.getHours()); // exibe a hora atual 10
+
+//getMinutes()
+hoje = new Date();
+console.log(hoje.getMinutes()); // exibe os minutos atuais 30
+
