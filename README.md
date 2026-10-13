@@ -34,6 +34,27 @@ Bindings:
     },
 ```
 
+## Estrutura de arquivos da Widget
+- src/
+    - main/
+        - resources/
+            - application.info [ metadados do widget, como identificação, nome, descrição e outras propriedades de configuração ]
+            - view.ftl [ define a visualização principal do widget, ou seja, o que o usuário vê na página ]
+            - edit.ftl [ define a tela de configuração do widget, normalmente acessada pelo administrador ou editor da página ]
+            - widget.properties [ arquivo de textos e propriedades padrão, conforme a configuração do widget ]
+            - widget_pt_BR.properties [ textos em português do Brasil ]
+            - widget_es.properties [ textos em inglês dos Estados Unidos ]
+            - widget_es_US.properties [ textos em espanhol ]
+    - webapp/
+        - resources/ [ recursos utilizados pelo frontend ]
+            - css/
+            - images/
+            - js/
+                - widget.js
+        - WEB-INF/
+
+view.ftl [ estrutura o conteúdo que será apresentado ] --> widget.js + css/ [ adicionam interatividade e definem a aparência ]
+
 ## Super Widget
 nada mais é do que um "molde" que o Fluig disponibiliza para você utilizar no desenvolvimento de widgets. toda widget vai seguir o mesmo padrão de desenvolvimento para poder ser reutilizada em uma ou mais páginas dentro da plataforma
 ```
