@@ -22,10 +22,39 @@ Widgets:
 - acesso rápido a relatórios e documentos
 - acesso a endereços web
 
+Bindings:
+- local: quando quer interagir com a widget
+- global: interage fora da widget
+```
+    bindings: {
+        local: {
+            'execute': ['click_executeAction']
+        },
+        global: {}
+    },
+```
+
+## Super Widget
+nada mais é do que um "molde" que o Fluig disponibiliza para você utilizar no desenvolvimento de widgets. toda widget vai seguir o mesmo padrão de desenvolvimento para poder ser reutilizada em uma ou mais páginas dentro da plataforma
+```
+var MyWidget = SuperWidget.extend({ //super classe
+    //função de trigger logo quando a página é carregada
+    init: function() {},
+
+    //variáveis
+    instanceId: null,
+    DOM: null,
+
+    //função
+    someFunc: function() {}
+});
+```
+- arquivo .ftl: arquivo do freemarker (engine de templates que facilia a criação deles)
+
 # Anotações estudo JavaScript voltado para Fluig
 
 ## Operadores 
-### Operdores de atribuição: permitem atribuição de valores, comparar informações e combinar condições em uma expressão.
+### Operdores de atribuição: permitem atribuição de valores, comparar informações e combinar condições em uma expressão
 - = atribui um valor
 - += soma e atribui
 - -= subtrai e atribui
