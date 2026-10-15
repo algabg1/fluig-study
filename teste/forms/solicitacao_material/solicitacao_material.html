@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide-flat.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+	<div class="form-group">
+		
+	<label for="solicitante">Nome do solicitante</label>
+	<input type="text" id="solicitante" name="solicitante" class="form-control" required>
+
+	</div>
+	
+	<div class="form-group">
+	
+	<label for="emailSolicitante">E-mail</label>
+	<input type="email" class="form-control" id="emailSolicitante" name="solicitante" required>
+
+	</div>
+	
+	<div class="form-group">
+	
+		<label for="material">Material solicitado</label>
+		<select id="material" name="material" required>
+		  <option value="">selecione o material</option>
+		</select>
+	
+	</div>
+	
+	<div class="form-group">
+	
+		<label for="quantidade">Quantidade</label>
+	    <input type="number" id="quantidade" name="quantidade" min="1" required>
+    
+    </div>
+    
+    <div class="form-group">
+	    
+    	<label for="justificativa">Justificativa</label>
+	    <textarea id="justificativa" name="justificativa" rows="4" cols="30" placeholder="Digite o motivo do pedido..." required></textarea>
+    
+    </div>
+    
+    <div class="form-group">
+    
+	    <label for="data">Data de Necessidade</label>
+	    <input type="date" id="data" name="data" required>
+
+	</div>
+	
+    <button class="btn btn-default" type="submit">Enviar Pedido</button>
+
+</form>
+</div>
+</body>
+</html>
