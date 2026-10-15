@@ -33,23 +33,50 @@ var MyWidget = SuperWidget.extend({
     },
     
     click_somar: function () {
+    	if (!this.verificaValores()) {
+    		return;
+    	}
+    	
     	var resultado = Number($("#valor1_" + this.instanceId).val()) + Number($("#valor2_" + this.instanceId).val());
     	$("#resultado_" + this.instanceId).val(resultado);
     },
     
     click_subtrair: function () {
+    	if (!this.verificaValores()) {
+    		return;
+    	}
+
     	var resultado = Number($("#valor1_" + this.instanceId).val()) - Number($("#valor2_" + this.instanceId).val());
     	$("#resultado_" + this.instanceId).val(resultado);
     },
     
     click_multiplicar: function () {
+    	if (!this.verificaValores()) {
+    		return;
+    	}
+
     	var resultado = Number($("#valor1_" + this.instanceId).val()) * Number($("#valor2_" + this.instanceId).val());
     	$("#resultado_" + this.instanceId).val(resultado);
     },
     
     click_dividir: function () {
+    	if (!this.verificaValores()) {
+    		return;
+    	}
+
     	var resultado = Number($("#valor1_" + this.instanceId).val()) / Number($("#valor2_" + this.instanceId).val());
     	$("#resultado_" + this.instanceId).val(resultado);
+    },
+    
+    verificaValores: function () {
+    	if ($("valor1_" + this.instanceId).val() == "" ||
+    		$("valor2_" + this.instanceId).val() == ""
+    	) {
+    		
+    		return false;
+    		
+    	}
+    	return true;
     }
 
 });
